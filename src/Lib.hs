@@ -7,6 +7,7 @@ import LukeEn
 import LukeTo
 import LukeTre
 import LukeFire
+import LukeFem
 
 infixr 2 £
 (£) = ($)
@@ -20,4 +21,5 @@ velgLuke = putStrLn "Velg en luke"
         2 -> printLøsningTo
         3 -> printLøsningTre
         4 -> printLøsningFire
+        5 -> printLøsningFem
         x -> error "Dette er ennå ikke et feature av mitt program"
