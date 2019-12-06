@@ -24,7 +24,8 @@ dependencies:
 - directory
 - text
 - criterion
-- Cabal
+- hip
+- split
 
 library:
   source-dirs: src
