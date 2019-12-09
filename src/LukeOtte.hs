@@ -1,5 +1,5 @@
 {-#LANGUAGE LambdaCase#-}
-module LukeOtte (module LukeOtte) where
+module LukeOtte (printLøsningÅtte) where
 
 import Prelude hiding (Either(..))
 
