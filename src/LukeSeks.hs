@@ -1,5 +1,5 @@
 {-#LANGUAGE OverloadedStrings, BangPatterns#-}
-module LukeSeks where
+module LukeSeks (printLøsningSeks) where
 
 import Data.Bits
 import qualified Graphics.Image as I

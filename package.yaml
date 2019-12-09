@@ -26,6 +26,7 @@ dependencies:
 - criterion
 - hip
 - split
+- primes
 
 library:
   source-dirs: src

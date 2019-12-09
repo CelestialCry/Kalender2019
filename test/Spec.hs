@@ -1,7 +1,7 @@
 import Criterion.Main
 import Lib
 
-import LukeFem
+import LukeOtte
 
 main :: IO ()
-main = defaultMain [bench "En" $ whnfIO printLøsningFem]
+main = defaultMain [bench "Åtte" $ whnfIO printLøsningÅtte]
