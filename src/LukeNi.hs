@@ -1,5 +1,5 @@
 {-#LANGUAGE OverloadedStrings, LambdaCase#-}
-module LukeNi where
+module LukeNi (printLøsningNi) where
 
 import qualified Data.Text as T
 import System.Directory
