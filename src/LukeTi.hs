@@ -53,9 +53,9 @@ ezRead "toalettpapir" = Toalettpapir
 ezRead _ = error "dette burde ikke være her"
 
 data Data = D {
-    tannkrem :: Double,
-    sjampo :: Double,
-    toalettpapir :: Double
+    tannkrem :: Int,
+    sjampo :: Int,
+    toalettpapir :: Int
 } deriving(Show, Read, Eq)
 
 instance Semigroup Data where
@@ -72,7 +72,7 @@ instance Monoid Data where
         toalettpapir = 0
     }
 
-toData :: [(Forbruk, Double)] -> Data
+toData :: [(Forbruk, Int)] -> Data
 toData (a:b:c:[]) = D {
     tannkrem = snd a,
     sjampo = snd b,
@@ -91,9 +91,9 @@ printLøsningTi :: IO ()
 printLøsningTi = do
     ls <- (getFile >>= parseFile) 
     let tot = mconcat $ filterDag (Right True) ls
-    let totTann = (tannkrem tot)/125
-    let totSjampo = (sjampo tot)/300
-    let totToalett = (toalettpapir tot)/25
+    let totTann = div (tannkrem tot) 125
+    let totSjampo = div (sjampo tot) 300
+    let totToalett = div (toalettpapir tot) 25
     let søSjampo = sjampo . mconcat $ filterDag (Left Sø) ls
     let onToalett = toalettpapir . mconcat $ filterDag (Left On) ls
     putStrLn ("totTann: " <> show totTann)
@@ -101,3 +101,4 @@ printLøsningTi = do
     putStrLn ("totToalettpapir: " <> show totToalett)
     putStrLn ("søSjampo: " <> show søSjampo)
     putStrLn ("onToalett: " <> show onToalett)
+    putStrLn ("løsning: " <> show (product [totTann, totSjampo, totToalett, søSjampo, onToalett]))
