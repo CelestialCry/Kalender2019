@@ -1,7 +1,7 @@
 {-#LANGUAGE LambdaCase#-}
 module Lib ( 
     velgLuke,
-    module LukeElleve
+    module LukeTolv
     ) where
 
 import LukeEn
@@ -15,6 +15,7 @@ import LukeOtte
 import LukeNi
 import LukeTi
 import LukeElleve
+import LukeTolv
 
 infixr 2 £
 (£) = ($)
@@ -35,4 +36,5 @@ velgLuke = putStrLn "Velg en luke"
         9 -> printLøsningNi
         10 -> printLøsningTi
         11 -> printLøsningElleve
+        12 -> printLøsningTolv
         x -> error "Dette er ennå ikke et feature av mitt program"
