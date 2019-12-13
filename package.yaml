@@ -27,6 +27,7 @@ dependencies:
 - hip
 - split
 - primes
+- aeson
 
 library:
   source-dirs: src

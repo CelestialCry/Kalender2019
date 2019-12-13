@@ -1,5 +1,5 @@
 {-#LANGUAGE OverloadedStrings#-}
-module LukeElleve where
+module LukeElleve (printLøsningElleve) where
 
 import qualified Data.Text as T
 import System.Directory

@@ -1,7 +1,7 @@
 {-#LANGUAGE LambdaCase#-}
 module Lib ( 
     velgLuke,
-    module LukeTolv
+--    module LukeTretten
     ) where
 
 import LukeEn
@@ -16,6 +16,7 @@ import LukeNi
 import LukeTi
 import LukeElleve
 import LukeTolv
+import LukeTretten
 
 infixr 2 £
 (£) = ($)
