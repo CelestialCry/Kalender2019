@@ -38,4 +38,5 @@ velgLuke = putStrLn "Velg en luke"
         10 -> printLøsningTi
         11 -> printLøsningElleve
         12 -> printLøsningTolv
+        13 -> printLøsningTretten
         x -> error "Dette er ennå ikke et feature av mitt program"

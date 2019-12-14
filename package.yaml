@@ -27,7 +27,8 @@ dependencies:
 - hip
 - split
 - primes
-- aeson
+- matrix
+- containers
 
 library:
   source-dirs: src
